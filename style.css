@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(img/colores-vibrantes_3840x2160_xtrafondos.com.jpg);
+    background-size:cover;
+    color: white;
+}
+header{
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    height: 60px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo{
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    font-weight:900;
+    letter-spacing: 1.3px;
+}
+.logo img{
+    height: 54px;
+    margin-right:10px ;
+}
+nav{
+    padding-right: 10px;
+    font-weight: 900 ;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900 ;
+}
+a:hover{
+    color: black;
+}
+
+.contact{
+    width: 50px;
+} 
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
