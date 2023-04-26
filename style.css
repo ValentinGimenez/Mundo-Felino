@@ -1,66 +1,220 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-image: url(img/colores-vibrantes_3840x2160_xtrafondos.com.jpg);
-    background-size:cover;
-    color: white;
-}
-header{
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    display: flex;
-    height: 60px;
-    padding: 10px;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.logo{
-    font-size: 30px;
-    align-items: center;
-    display: flex;
-    font-weight:900;
-    letter-spacing: 1.3px;
-}
-.logo img{
-    height: 54px;
-    margin-right:10px ;
-}
-nav{
-    padding-right: 10px;
-    font-weight: 900 ;
-    letter-spacing: 1px;
-    word-spacing: 10px;
-}
-a{
-    color: white;
-    text-decoration: none;
-    font-weight: 900 ;
-}
-a:hover{
-    color: black;
+
+* {
+  margin: 0;
+  /* padding: 0; */
+  font-family: 'Poppins', sans-serif;
 }
 
-.contact{
-    width: 50px;
-} 
-  .dropdown {
-  position: relative;
-  display: inline-block;
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(img/habitat-wallpaper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* background: linear-gradient(to bottom right, #ffffff 50%, #000000 50%) no-repeat; */
 }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
-  .dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+
+/*INICIO HEADER */
+header {
+  background: rgba(0, 0, 0, 0.0);
+  color: rgb(161, 250, 158);
+  display: flex;
+  min-height: 60px;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: flex-start; */
+  text-shadow: black 0.3em 0.2em 0.4em;
+  font-weight: 900;
+  /* flex-direction:column; */
+}
+
+.logo {
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.logo img {
+  height: 54px;
+  margin-right: 10px;
+  transition: transform 0.5s;
+}
+
+/* .logo img:hover{
+  filter: hue-rotate(120deg) brightness(60%);
+} */
+.logoR {
+  height: 30px;
+}
+
+nav {
+  padding-right: 20px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  word-spacing: 15px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+}
+
+a:hover {
+  color: purple;
+}
+
+/*FIN HEADER */
+
+.row {
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.felino {
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+}
+
+.felino p {
+  font-size: 15px;
+}
+
+.domestico {
+  background-image: url(img/domestico.jpg);
+}
+
+.salvaje {
+  background-image: url(img/salvaje.jpg);
+}
+
+.extincion {
+  background-image: url(img/extincion.jpg);
+}
+
+.felino:hover {
+  transform: translateY(-10px);
+}
+
+.felino h2 {
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact {
+  width: 40px;
+}
+
+/* INICIO GALERIA */
+.col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2vw;
+  width: 100%;
+  position: relative;
+}
+
+/* TITULOS GALERIA */
+.col h1 {
+  color: #ffffff;
+}
+.fila {
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  /* max-width: 80px; */
+  width: 50vw;
+  height: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 2px;
+  backdrop-filter: blur(10px);
+  flex-direction: row-reverse;
+}
+
+button {
+  border: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  font-size: 4vw;
+  width: 3vw;
+  position: absolute;
+  color: #fff;
+  backdrop-filter: blur(1px);
+  border-radius: 6px;
+}
+
+.avanzar {
+  right: 20%;
+  top: 45%;
+}
+
+.retroceder {
+  left: 20%;
+  top: 45%;
+}
+
+button:hover {
+  color: #000000;
+  background: #fff;
+}
+
+.text {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* INFORMACION SOBRE LOS ANIMALES */
+.text p {
+  color: grey;
+  text-align: start;
+}
+
+/* NOMBRES ANIMALES */
+.text h2 {
+  text-align: start;
+  color: #fff;
+  font-weight: 900;
+}
+
+.fila img {
+  width: 13vw;
+  /* max-width: 20vw; */
+  margin-right: 25px;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
