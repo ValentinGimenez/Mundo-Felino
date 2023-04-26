@@ -151,7 +151,7 @@ a:hover {
   display: flex;
   justify-content: center;
   width: 50vw;
-  /* height: 20vw; */
+  height: 20vw;
   margin-left: auto;
   margin-right: auto;
   margin: 2px;
@@ -195,6 +195,7 @@ button:hover {
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 10px;
+  font-size: 0.88vw
 }
 
 /* INFORMACION SOBRE LOS ANIMALES */
@@ -212,8 +213,9 @@ button:hover {
 
 /* IMAGENES ANIMALES */
 .fila img {
-  width: 20vw;
-  /* max-width: 20vw; */
+  min-width: 15vw;
+  max-width: 15vw;
+  max-height: 400px;
   margin-right: 25px;
   display: block;
   margin: 0;
