@@ -51,7 +51,7 @@ let opc = [
         tipo: "FELINOS SALVAJES",
         animal: "LEOPARDO",
         info: "El leopardo es un felino de tamaño mediano a grande con un pelaje de color amarillo dorado o marrón cubierto de manchas negras. Son solitarios y nocturnos, lo que los hace difíciles de detectar en la naturaleza. Tienen patas cortas y musculosas, una cabeza redondeada con una mandíbula fuerte y dientes afilados. Los leopardos son depredadores ágiles y capaces de trepar árboles y nadar. Se alimentan de una variedad de animales, incluyendo antílopes, monos y pequeños roedores.",
-        imagen: 'img/animales/salvajes/leopardo.jpg'
+        imagen: 'img/animales/salvajes/leopardo2.jpg'
     },
     {
         tipo: "FELINOS SALVAJES",

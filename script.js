@@ -25,3 +25,19 @@ function retroceder() {
   }
   cargar();
 }
+
+function avanzarA(a) {
+  pos = a;
+  cargar();
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const tipo = urlParams.get("tipo");
+
+if (tipo === "domestico") {
+  avanzarA(0);
+} else if (tipo === "salvaje") {
+  avanzarA(6);
+} else if (tipo === "extincion") {
+  avanzarA(10);
+}

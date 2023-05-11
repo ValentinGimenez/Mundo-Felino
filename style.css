@@ -13,7 +13,7 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* background: linear-gradient(to bottom right, #ffffff 50%, #000000 50%) no-repeat; */
+  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask6135%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%23SvgjsRadialGradient6136)'%3e%3c/rect%3e%3cpath d='M1920 0L1291.9 0L1920 94.64z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1291.9 0L1920 94.64L1920 442.15999999999997L839.5800000000002 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M839.5799999999999 0L1920 442.15999999999997L1920 779.89L452.4799999999999 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M452.48 0L1920 779.89L1920 827.25L420.55 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1080L279.64 1080L0 681.6z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 681.6L279.64 1080L560.04 1080L0 416.13z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 416.13L560.04 1080L1214.98 1080L0 176.26999999999998z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 176.26999999999998L1214.98 1080L1696.39 1080L0 89.40999999999998z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask6135'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='1101.45' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient6136'%3e%3cstop stop-color='rgba(71%2c 158%2c 93%2c 1)' offset='0.5'%3e%3c/stop%3e%3cstop stop-color='rgba(147%2c 147%2c 147%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e"); */
 }
 
 /*INICIO HEADER */
@@ -37,19 +37,13 @@ header {
   display: flex;
   font-weight: 900;
   letter-spacing: 1.3px;
+  color: rgb(161, 250, 158);
+
 }
 
 .logo img {
   height: 54px;
   margin-right: 10px;
-  transition: transform 0.5s;
-}
-
-/* .logo img:hover{
-  filter: hue-rotate(120deg) brightness(60%);
-} */
-.logoR {
-  height: 30px;
 }
 
 nav {
@@ -75,6 +69,10 @@ a:hover {
   color: purple;
 }
 
+nav ul li a.activo {
+  color: purple;
+}
+
 /*FIN HEADER */
 
 /*INICIO CONTENIDO  */
@@ -97,6 +95,7 @@ a:hover {
   background-position: center;
   background-size: cover;
   transition: 0.5s;
+  box-shadow: 0px 0px 20px black;
 }
 
 .felino p {
@@ -116,7 +115,9 @@ a:hover {
 }
 
 .felino:hover {
+  filter: none;
   transform: translateY(-10px);
+  box-shadow: 0px 0px 20px white;
 }
 
 .felino h2 {
@@ -129,7 +130,6 @@ a:hover {
 }
 
 /*FIN INICIO  */
-
 /* INICIO GALERIA */
 .col {
   display: flex;
@@ -158,6 +158,7 @@ a:hover {
   backdrop-filter: blur(10px);
   flex-direction: row-reverse;
   overflow: hidden;
+  border-radius: 6px;
 }
 
 button {
@@ -223,3 +224,99 @@ button:hover {
 }
 
 /* FIN GALERIA */
+
+/* INICIO FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* background: rgba(0, 0, 0, 1); */
+  color: rgb(161, 250, 158);
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  text-shadow: black 0.3em 0.2em 0.4em;
+  font-weight: 900;
+  display: flex;
+  /* flex-wrap: wrap; */
+
+}
+
+.footer col {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.info {
+  text-align: center;
+}
+
+.social {
+  font-weight: 900;
+  word-spacing: 3px;
+  /* background-color: red; */
+  text-decoration: none;
+  text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.social a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 2vh;
+  margin: 0 10px 10px 0;
+  background-color: rgb(56, 56, 56);
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  transition: 0.5s;
+}
+
+.social a:hover {
+  color: black;
+  transform: translateY(-2px);
+}
+
+.footer img {
+  width: 2vw;
+  filter: grayscale(100%) brightness(100%);
+  border-radius: 10px;
+}
+
+.footer img:hover {
+  filter: none;
+}
+
+.footer-logo {
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  text-shadow: black 0.3em 0.2em 0.4em;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  border-bottom: 2px solid purple;
+}
+
+.footer-logo img {
+  width: 35px;
+  margin-right: 10px;
+  padding: 1px;
+  filter: none;
+}
+
+
+/* FIN FOOTER */
