@@ -9,11 +9,10 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(img/habitat-wallpaper.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(img/background.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask6135%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%23SvgjsRadialGradient6136)'%3e%3c/rect%3e%3cpath d='M1920 0L1291.9 0L1920 94.64z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1291.9 0L1920 94.64L1920 442.15999999999997L839.5800000000002 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M839.5799999999999 0L1920 442.15999999999997L1920 779.89L452.4799999999999 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M452.48 0L1920 779.89L1920 827.25L420.55 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 1080L279.64 1080L0 681.6z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 681.6L279.64 1080L560.04 1080L0 416.13z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 416.13L560.04 1080L1214.98 1080L0 176.26999999999998z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 176.26999999999998L1214.98 1080L1696.39 1080L0 89.40999999999998z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask6135'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='1101.45' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient6136'%3e%3cstop stop-color='rgba(71%2c 158%2c 93%2c 1)' offset='0.5'%3e%3c/stop%3e%3cstop stop-color='rgba(147%2c 147%2c 147%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e"); */
 }
 
 /*INICIO HEADER */
