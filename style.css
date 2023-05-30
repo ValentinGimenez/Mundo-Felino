@@ -20,7 +20,7 @@ header {
   background: rgba(0, 0, 0, 0.0);
   color: rgb(161, 250, 158);
   display: flex;
-  min-height: 60px;
+  min-height: 1vw;
   padding: 10px;
   align-items: center;
   justify-content: space-between;
@@ -28,21 +28,17 @@ header {
   text-shadow: black 0.3em 0.2em 0.4em;
   font-weight: 900;
   /* flex-direction:column; */
+  font-size: 1vw;
 }
 
 .logo {
-  font-size: 30px;
+  font-size: 2vw;
   align-items: center;
   display: flex;
   font-weight: 900;
   letter-spacing: 1.3px;
   color: rgb(161, 250, 158);
 
-}
-
-.logo img {
-  height: 54px;
-  margin-right: 10px;
 }
 
 nav {
@@ -63,7 +59,6 @@ li {
   display: inline-block;
   list-style: none;
 }
-
 a:hover {
   color: purple;
 }
@@ -81,10 +76,9 @@ nav ul li a.activo {
   align-items: center;
   justify-content: center;
 }
-
 .felino {
-  width: 300px;
-  height: 400px;
+  width: 17vw;
+  height: 23vw;
   display: inline-block;
   border-radius: 20px;
   padding: 15px 30px;
@@ -123,6 +117,7 @@ nav ul li a.activo {
   background: rgba(0, 0, 0, 0.3);
   position: relative;
   border-radius: 20px;
+  font-size: 1.2vw;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -254,9 +249,6 @@ footer {
   display: flex;
 }
 
-.info {
-  text-align: center;
-}
 
 .social {
   font-weight: 900;
@@ -268,13 +260,13 @@ footer {
 
 .social a {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  font-size: 2vh;
+  width: 2.5vw;
+  height: 2.5vw;
+  font-size: 1vw;
   margin: 0 10px 10px 0;
   background-color: rgb(56, 56, 56);
   border-radius: 50%;
-  line-height: 40px;
+  line-height: 2.5vw;
   text-align: center;
   color: white;
   transition: 0.5s;
@@ -285,18 +277,8 @@ footer {
   transform: translateY(-2px);
 }
 
-.footer img {
-  width: 2vw;
-  filter: grayscale(100%) brightness(100%);
-  border-radius: 10px;
-}
-
-.footer img:hover {
-  filter: none;
-}
-
 .footer-logo {
-  font-size: 20px;
+  font-size: 1.4vw;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -310,12 +292,10 @@ footer {
   border-bottom: 2px solid purple;
 }
 
-.footer-logo img {
-  width: 35px;
-  margin-right: 10px;
-  padding: 1px;
-  filter: none;
-}
-
 
 /* FIN FOOTER */
+
+
+.forms{
+ 
+}
