@@ -58,4 +58,5 @@ function mostrar() {
     <p>${correo}</p>
     <p class="ptext" >${mensaje}</p>
   `;
+  document.querySelector('form').reset();
 }
