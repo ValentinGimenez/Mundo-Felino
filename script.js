@@ -48,10 +48,14 @@ function mostrar() {
   const correo = document.querySelector('input[name="correo"]').value;
   const mensaje = document.querySelector('textarea[name="mensaje"]').value;
   const resultado = document.querySelector('.resultado');
+  const colimgh2 = document.querySelector(".colimg h2");
+  const colimg = document.querySelector(".colimg");
+  colimg.style.background = "none";
+  colimgh2.innerHTML = `RESULTADO`;
   resultado.innerHTML = `
-    <p>Nombre: ${nombre}</p>
-    <p>Teléfono: ${telefono}</p>
-    <p>Correo: ${correo}</p>
-    <p>Mensaje: ${mensaje}</p>
+    <p>${nombre}</p>
+    <p>${telefono}</p>
+    <p>${correo}</p>
+    <p class="ptext" >${mensaje}</p>
   `;
 }

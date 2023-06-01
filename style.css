@@ -295,84 +295,122 @@ footer {
 
 /* FIN FOOTER */
 
-section{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  height: 75%;
+/* CONTACTO */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.rowform{
-	max-width: 800px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	background: rgba(220, 220, 220, 0.2);
+.rowform {
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(220, 220, 220, 0.2);
   backdrop-filter: blur(5px);
-	border-radius: 20px;
+  border-radius: 20px;
   box-shadow: 0px 0px 80px grey;
 }
 
-.colimg{
-	background: url("img/animales/MAINE-COON-3.webp");
+.colimg {
+  background: url("img/animales/MAINE-COON-3.webp");
   background-position: center;
   background-size: cover;
-	height: 100%;
-	border-bottom-left-radius: 20px;
-	border-top-left-radius: 20px;
-  
-}
-.colimgtext{
-  color: white;
-  margin:20px;
-  text-align:justify;
-  
-}
-.colform{
-	padding: 20px;
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
+
 }
 
-.colform h2{
+.colimg h2 {
+  margin-top: 20px;
+  color: white;
+  text-shadow: 0 0 5px black, 0 0 10px black;
+  margin-bottom: 25px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  word-spacing: 15px;
+}
+
+.colimg p {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  font-size: 16px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.ptext {
+  min-height: 150px;
+}
+
+.colimgtext {
+  margin: 20px;
+  color: white;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.resultado h4 {
+  color: grey;
+}
+
+.colform {
+  padding: 20px;
+
+}
+
+.colform h2 {
   color: rgb(0, 0, 0);
   text-shadow: 0 0 5px #fff, 0 0 10px #fff;
   margin-bottom: 25px;
   font-weight: 900;
   letter-spacing: 4px;
   word-spacing: 15px;
-  
+
 }
 
-.input{
-	width: 100%;
+.input {
+  width: 100%;
   box-sizing: border-box;
-	padding: 10px 10px;
-	font-size: 16px;
-	margin-bottom: 22px;
-	border-radius: 10px;
-  border: none;
-	outline: none;
-}
-
-textarea{
-	min-height: 150px;
-	resize: none;
-}
-
-.buttonsubmit{
-	width: 100%;
-	padding: 10px;
-	background-color: black;
-	color: white;
-	font-size: 16px;
+  padding: 10px 10px;
+  font-size: 16px;
+  margin-bottom: 22px;
   border-radius: 10px;
-	border: none;
-	outline: none;
-	cursor: pointer;
+  border: none;
+  outline: none;
 }
 
-.buttonsubmit:hover{
-    background-color: grey;
-    color: white;
+textarea {
+  min-height: 150px;
+  resize: none;
 }
+
+.buttonsubmit {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonsubmit:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* FIN CONTACTO */
