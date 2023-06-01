@@ -41,3 +41,17 @@ if (tipo === "domestico") {
 } else if (tipo === "extincion") {
   avanzarA(10);
 }
+
+function mostrar() {
+  const nombre = document.querySelector('input[name="nombre"]').value;
+  const telefono = document.querySelector('input[name="telefono"]').value;
+  const correo = document.querySelector('input[name="correo"]').value;
+  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+  const resultado = document.querySelector('.resultado');
+  resultado.innerHTML = `
+    <p>Nombre: ${nombre}</p>
+    <p>Teléfono: ${telefono}</p>
+    <p>Correo: ${correo}</p>
+    <p>Mensaje: ${mensaje}</p>
+  `;
+}

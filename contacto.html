@@ -28,18 +28,24 @@
     </nav>
 
   </header>
-  <div class="form-container">
-    <div class="forms">
-      <form>
-        <input type="text" name="nombre" id="input">
-        <input type="tel" name="telefono" id="input">
-        <input type="email" name="email" id="input">
-        <textarea name="mensaje" id="mensaje" ></textarea>
-        <input type="submit" value="enviar" id="submit">
-
-      </form>
+  <section>
+    <div class="rowform">
+      <div class="colimg">
+        <div class="colimgtext">
+          <div class="error"></div>
+          <div class="resultado"></div>
+        </div>
+      </div>
+      <div class="colform">
+        <h2>CONCTACTO</h2>
+        <input type="text" name="nombre" placeholder="Nombre" class="input">
+        <input type="tel" name="telefono" placeholder="Telefono" class="input">
+        <input type="email" name="correo" placeholder="Email" class="input">
+        <textarea name="mensaje" placeholder="Mensaje" class="input"></textarea>
+        <button class="buttonsubmit" type="submit" onclick="mostrar()">ENVIAR</button>
+      </div>
     </div>
-  </div>
+  </section>
   <footer>
     <div class="footer">
       <div class="footer-row">
