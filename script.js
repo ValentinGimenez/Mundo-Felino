@@ -46,6 +46,8 @@ function validar() {
   const telefono = document.querySelector('input[name="telefono"]').value;
   const correo = document.querySelector('input[name="correo"]').value;
   const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+  const resultado = document.querySelector('.resultado');
+  resultado.innerHTML = '';
   validacionNombre(nombre);
   validacionTelefono(telefono);
   validacionEmail(correo);
@@ -135,11 +137,18 @@ function mostrar(nombre, telefono, correo, mensaje) {
   colresultado.style.width = '400px';
   colresultado.style.padding = '20px';
   colresultadoh2.innerHTML = `RESULTADO`;
-  resultado.innerHTML = `
-    <p>${nombre}</p>
-    <p>${telefono}</p>
-    <p>${correo}</p>
-    <p class="ptext" >${mensaje}</p>
-  `;
-  document.querySelector('form').reset();
+  const nombreelement = document.createElement('p');
+  const telefonoelement = document.createElement('p');
+  const correoelement = document.createElement('p');
+  const mensajeelement = document.createElement('p');
+  nombreelement.textContent = nombre;
+  telefonoelement.textContent = telefono;
+  correoelement.textContent = correo;
+  mensajeelement.textContent = mensaje;
+  mensajeelement.classList.add('ptext');
+  resultado.appendChild(nombreelement);
+  resultado.appendChild(telefonoelement);
+  resultado.appendChild(correoelement);
+  resultado.appendChild(mensajeelement);
+  // document.querySelector('form').reset();
 }
