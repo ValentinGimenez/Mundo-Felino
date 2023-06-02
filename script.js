@@ -41,6 +41,12 @@ if (tipo === "domestico") {
 } else if (tipo === "extincion") {
   avanzarA(10);
 }
+function limpiar() {
+  const colresultado = document.querySelector('.colresultado');
+  colresultado.style.display = 'none';
+  const rowform = document.querySelector(".rowform");
+  rowform.style.gridTemplateColumns = "repeat(1, 1fr)";
+}
 function validar() {
   const nombre = document.querySelector('input[name="nombre"]').value;
   const telefono = document.querySelector('input[name="telefono"]').value;
@@ -48,12 +54,24 @@ function validar() {
   const mensaje = document.querySelector('textarea[name="mensaje"]').value;
   const resultado = document.querySelector('.resultado');
   resultado.innerHTML = '';
-  validacionNombre(nombre);
-  validacionTelefono(telefono);
-  validacionEmail(correo);
-  validacionMensaje(mensaje);
-  if (validacionNombre(nombre) && validacionTelefono(telefono) && validacionEmail(correo) && validacionMensaje(mensaje)) {
+  let error = 0;
+  if (validacionNombre(nombre)) {
+  } else {
+    error++;
+  }
+  if (!validacionTelefono(telefono)) {
+    error++;
+  }
+  if (!validacionEmail(correo)) {
+    error++;
+  }
+  if (!validacionMensaje(mensaje)) {
+    error++;
+  } 
+  if (error === 0) {
     mostrar(nombre, telefono, correo, mensaje);
+  } else {
+    limpiar();
   }
 }
 
@@ -133,6 +151,7 @@ function mostrar(nombre, telefono, correo, mensaje) {
   rowform.style.gridTemplateColumns = "repeat(2, 1fr)";
   const colresultadoh2 = document.querySelector(".colresultado h2");
   const colresultado = document.querySelector(".colresultado");
+  colresultado.style.display = 'block'
   colresultado.style.height = '480px';
   colresultado.style.width = '400px';
   colresultado.style.padding = '20px';
@@ -150,5 +169,5 @@ function mostrar(nombre, telefono, correo, mensaje) {
   resultado.appendChild(telefonoelement);
   resultado.appendChild(correoelement);
   resultado.appendChild(mensajeelement);
-  // document.querySelector('form').reset();
+  document.querySelector('form').reset();
 }
