@@ -26,10 +26,8 @@ header {
   padding: 10px;
   align-items: center;
   justify-content: space-between;
-  /* justify-content: flex-start; */
   text-shadow: black 0.3em 0.2em 0.4em;
   font-weight: 900;
-  /* flex-direction:column; */
   font-size: 0.9vw;
 }
 
@@ -303,7 +301,7 @@ section {
 }
 
 .rowform {
-  max-width: 800px;
+  max-width: 850px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
@@ -313,24 +311,28 @@ section {
   backdrop-filter: blur(5px);
   border-radius: 20px;
   box-shadow: 0px 0px 80px grey;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
-.colimg {
-  height: 100%;
+.colresultado {
   overflow: hidden;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
 }
 
-.colimg h2 {
-  margin-top: 20px;
+.colresultado h2 {
   color: white;
   text-shadow: 0 0 5px black, 0 0 10px black;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   font-weight: 900;
   letter-spacing: 4px;
   word-spacing: 15px;
 }
 
-.colimg p {
+.colresultado p {
   width: 100%;
   box-sizing: border-box;
   padding: 10px 10px;
@@ -347,8 +349,7 @@ section {
   min-height: 150px;
 }
 
-.colimgtext {
-  margin: 20px;
+.resultado {
   color: white;
   text-align: justify;
   word-wrap: break-word;
@@ -358,6 +359,7 @@ section {
 .colform {
   padding: 20px;
   max-width: 400px;
+  width: 400px;
 }
 
 .colform h2 {
@@ -384,6 +386,7 @@ textarea {
   resize: none;
 }
 
+
 .buttonsubmit {
   width: 100%;
   padding: 10px;
@@ -394,13 +397,19 @@ textarea {
   border: none;
   outline: none;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .buttonsubmit:hover {
   background-color: grey;
   color: white;
 }
-.errornombre, .errortelefono,.erroremail, .errormensaje{
+
+.errornombre,
+.errortelefono,
+.erroremail,
+.errormensaje {
   color: red;
 }
+
 /* FIN CONTACTO */

@@ -42,35 +42,29 @@ if (tipo === "domestico") {
   avanzarA(10);
 }
 function validar() {
-  const nombre = document.querySelector('input[name="nombre"]').value.trim();
-  const telefono = document.querySelector('input[name="telefono"]').value.trim();
-  const correo = document.querySelector('input[name="correo"]').value.trim();
-  const mensaje = document.querySelector('textarea[name="mensaje"]').value.trim();
+  const nombre = document.querySelector('input[name="nombre"]').value;
+  const telefono = document.querySelector('input[name="telefono"]').value;
+  const correo = document.querySelector('input[name="correo"]').value;
+  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
   validacionNombre(nombre);
   validacionTelefono(telefono);
   validacionEmail(correo);
   validacionMensaje(mensaje);
   if (validacionNombre(nombre) && validacionTelefono(telefono) && validacionEmail(correo) && validacionMensaje(mensaje)) {
-    mostrar();
+    mostrar(nombre, telefono, correo, mensaje);
   }
 }
-function mensajeerror(mensaje, claseerror) {
-  const error = document.querySelector(`.${claseerror}`);
-  const errormensaje = document.createElement('p');
-  errormensaje.textContent = mensaje;
-  error.appendChild(errormensaje);
-}
+
 function validacionNombre(nombre) {
   const errornombre = document.querySelector('.errornombre');
-  errornombre.innerHTML = '';
-  if (nombre === "") {
-    mensajeerror('El campo nombre se encuentra vacio', 'errornombre');
+  if (nombre.trim() === "") {
+    errornombre.innerHTML = 'El campo nombre se encuentra vacio', 'errornombre';
     return false;
-  } else if (nombre.length > 31) {
-    mensajeerror('El campo nombre supera los 31 caracteres permitidos.', 'errornombre');
+  } else if (nombre.length > 40) {
+    errornombre.innerHTML = 'El campo nombre supera los 40 caracteres permitidos.', 'errornombre';
     return false;
   } else if (validarnombre(nombre)) {
-    mensajeerror('Solo se permiten letras en el campo nombre.', 'errornombre');
+    errornombre.innerHTML = 'Solo se permiten letras en el campo nombre.', 'errornombre';
     return false;
   } else {
     errornombre.innerHTML = '';
@@ -79,15 +73,14 @@ function validacionNombre(nombre) {
 }
 function validacionTelefono(telefono) {
   const errortelefono = document.querySelector('.errortelefono');
-  errortelefono.innerHTML = '';
-  if (telefono === "") {
-    mensajeerror('El campo telefono se encuentra vacio.', 'errortelefono');
+  if (telefono.trim() === "") {
+    errortelefono.innerHTML = 'El campo telefono se encuentra vacio.', 'errortelefono';
     return false;
   } else if (telefono.length > 15) {
-    mensajeerror('El campo telefono supera los 15 caracteres permitidos.', 'errortelefono');
+    errortelefono.innerHTML = 'El campo telefono supera los 15 caracteres permitidos.', 'errortelefono';
     return false;
   } else if (!validartelefono(telefono)) {
-    mensajeerror('Solo se permiten numeros en el campo telefono.', 'errortelefono');
+    errortelefono.innerHTML = 'Solo se permiten numeros en el campo telefono.', 'errortelefono';
     return false;
   } else {
     errortelefono.innerHTML = '';
@@ -96,12 +89,11 @@ function validacionTelefono(telefono) {
 }
 function validacionEmail(correo) {
   const erroremail = document.querySelector('.erroremail');
-  erroremail.innerHTML = '';
   if (correo === "") {
-    mensajeerror('El campo correo se encuentra vacio', 'erroremail');
+    erroremail.innerHTML = 'El campo correo se encuentra vacio', 'erroremail';
     return false;
   } else if (!validaremail(correo)) {
-    mensajeerror('El campo correo se ingreso de manera incorrecta.', 'erroremail');
+    erroremail.innerHTML = 'El campo correo se ingreso de manera incorrecta.', 'erroremail';
     return false;
   } else {
     erroremail.innerHTML = '';
@@ -110,12 +102,11 @@ function validacionEmail(correo) {
 }
 function validacionMensaje(mensaje) {
   const errormensaje = document.querySelector('.errormensaje');
-  errormensaje.innerHTML = '';
-  if (mensaje === "") {
-    mensajeerror('El campo mensaje se encuentra vacio', 'errormensaje');
+  if (mensaje.trim() === "") {
+    errormensaje.innerHTML = 'El campo mensaje se encuentra vacio', 'errormensaje';
     return false;
-  } else if (mensaje.length > 165) {
-    mensajeerror('El campo mensaje supera los 165 caracteres permitidos.', 'errormensaje');
+  } else if (mensaje.length > 187) {
+    errormensaje.innerHTML = 'El campo mensaje supera los 187 caracteres permitidos.', 'errormensaje';
     return false;
   } else {
     errormensaje.innerHTML = '';
@@ -134,16 +125,16 @@ function validaremail(correo) {
   const vemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return vemail.test(correo);
 }
-function mostrar() {
-  const nombre = document.querySelector('input[name="nombre"]').value;
-  const telefono = document.querySelector('input[name="telefono"]').value;
-  const correo = document.querySelector('input[name="correo"]').value;
-  const mensaje = document.querySelector('textarea[name="mensaje"]').value;
+function mostrar(nombre, telefono, correo, mensaje) {
   const resultado = document.querySelector('.resultado');
   const rowform = document.querySelector(".rowform");
   rowform.style.gridTemplateColumns = "repeat(2, 1fr)";
-  const colimgh2 = document.querySelector(".colimg h2");
-  colimgh2.innerHTML = `RESULTADO`;
+  const colresultadoh2 = document.querySelector(".colresultado h2");
+  const colresultado = document.querySelector(".colresultado");
+  colresultado.style.height = '480px';
+  colresultado.style.width = '400px';
+  colresultado.style.padding = '20px';
+  colresultadoh2.innerHTML = `RESULTADO`;
   resultado.innerHTML = `
     <p>${nombre}</p>
     <p>${telefono}</p>
