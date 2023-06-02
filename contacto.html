@@ -33,20 +33,24 @@
       <div class="colimg">
         <h2></h2>
         <div class="colimgtext">
-          <div class="error"></div>
           <div class="resultado">
           </div>
         </div>
       </div>
       <div class="colform">
-        <h2>CONCTACTO</h2>
+        <h2>CONTACTO</h2>
         <form>
           <input type="text" name="nombre" placeholder="Nombre" class="input">
+          <span class="errornombre"></span>
           <input type="tel" name="telefono" placeholder="Telefono" class="input">
+          <span class="errortelefono"></span>
           <input type="email" name="correo" placeholder="Email" class="input">
+          <span class="erroremail"></span>
           <textarea name="mensaje" placeholder="Mensaje" class="input"></textarea>
+          <span class="errormensaje"></span>
         </form>
-        <button class="buttonsubmit" type="submit" onclick="mostrar()">ENVIAR</button>
+        <div class="error"></div>
+        <button class="buttonsubmit" type="submit" onclick="validar()">ENVIAR</button>
       </div>
     </div>
   </section>
