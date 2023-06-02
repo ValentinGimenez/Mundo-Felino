@@ -55,8 +55,7 @@ function validar() {
   const resultado = document.querySelector('.resultado');
   resultado.innerHTML = '';
   let error = 0;
-  if (validacionNombre(nombre)) {
-  } else {
+  if (!validacionNombre(nombre)) {
     error++;
   }
   if (!validacionTelefono(telefono)) {
@@ -67,7 +66,7 @@ function validar() {
   }
   if (!validacionMensaje(mensaje)) {
     error++;
-  } 
+  }
   if (error === 0) {
     mostrar(nombre, telefono, correo, mensaje);
   } else {
