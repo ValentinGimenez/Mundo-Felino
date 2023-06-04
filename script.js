@@ -76,13 +76,14 @@ function validar() {
 
 function validacionNombre(nombre) {
   const errornombre = document.querySelector('.errornombre');
+  const vnombre = /\d/;
   if (nombre.trim() === "") {
     errornombre.innerHTML = 'El campo nombre se encuentra vacio', 'errornombre';
     return false;
   } else if (nombre.length > 40) {
     errornombre.innerHTML = 'El campo nombre supera los 40 caracteres permitidos.', 'errornombre';
     return false;
-  } else if (validarnombre(nombre)) {
+  } else if (vnombre.test(nombre)) {
     errornombre.innerHTML = 'Solo se permiten letras en el campo nombre.', 'errornombre';
     return false;
   } else {
@@ -92,13 +93,14 @@ function validacionNombre(nombre) {
 }
 function validacionTelefono(telefono) {
   const errortelefono = document.querySelector('.errortelefono');
+  const vtelefono = /^\d+$/;
   if (telefono.trim() === "") {
     errortelefono.innerHTML = 'El campo telefono se encuentra vacio.', 'errortelefono';
     return false;
   } else if (telefono.length > 15) {
     errortelefono.innerHTML = 'El campo telefono supera los 15 caracteres permitidos.', 'errortelefono';
     return false;
-  } else if (!validartelefono(telefono)) {
+  } else if (!(vtelefono.test(telefono))) {
     errortelefono.innerHTML = 'Solo se permiten numeros en el campo telefono.', 'errortelefono';
     return false;
   } else {
@@ -108,10 +110,11 @@ function validacionTelefono(telefono) {
 }
 function validacionEmail(correo) {
   const erroremail = document.querySelector('.erroremail');
+  const vemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (correo === "") {
     erroremail.innerHTML = 'El campo correo se encuentra vacio', 'erroremail';
     return false;
-  } else if (!validaremail(correo)) {
+  } else if (!(vemail.test(correo))) {
     erroremail.innerHTML = 'El campo correo se ingreso de manera incorrecta.', 'erroremail';
     return false;
   } else {
@@ -131,18 +134,6 @@ function validacionMensaje(mensaje) {
     errormensaje.innerHTML = '';
     return true;
   }
-}
-function validarnombre(nombre) {
-  const vnombre = /\d/;
-  return vnombre.test(nombre);
-}
-function validartelefono(telefono) {
-  const vtelefono = /^\d+$/;
-  return vtelefono.test(telefono);
-}
-function validaremail(correo) {
-  const vemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return vemail.test(correo);
 }
 function mostrar(nombre, telefono, correo, mensaje) {
   const resultado = document.querySelector('.resultado');
