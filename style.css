@@ -435,11 +435,9 @@ textarea {
     font-size: 3vw;
     text-align: center;
   }
-
   .row {
     flex-direction: column;
   }
-
   .felino {
     width: 34vw;
     height: 46vw;
@@ -501,5 +499,21 @@ textarea {
     max-width: 80vw;
     min-height: 100vw;
     max-height: 100vw;
+  }
+  
+  .rowform {
+    max-width: 300px;
+    box-shadow: none;
+  }
+
+  .colform {
+    width: 300px;
+  }
+
+  .colform h2,.colresultado h2{
+    font-size: 15px;
+  }
+  textarea, .ptext {
+    min-height: 200px;
   }
 }

@@ -145,6 +145,13 @@ function mostrar(nombre, telefono, correo, mensaje) {
   colresultado.style.height = '480px';
   colresultado.style.width = '400px';
   colresultado.style.padding = '20px';
+  if (window.innerWidth < 600){
+    rowform.style.gridTemplateColumns = "repeat(1, 1fr)";
+    const colform =document.querySelector(".colform");
+    colform.style.display='none';
+    colresultado.style.height = '518px';
+    colresultado.style.width = '300px';
+  }
   colresultadoh2.innerHTML = `RESULTADO`;
   const nombreelement = document.createElement('p');
   const telefonoelement = document.createElement('p');
