@@ -75,18 +75,10 @@ nav ul li a.activo {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.introduccion {
-
-  color: #fff;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  width: 54vw;
-  margin: 40px;
-  border-radius: 20px;
   font-size: 1.2vw;
+  margin: 40px;
+  color: #fff;
 }
 
 .felino {
@@ -430,11 +422,11 @@ textarea {
   header {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10vw;
   }
 
   .logo {
     font-size: 6vw;
-    margin-bottom: 20px;
     text-align: center;
     padding-left: 20px;
   }
@@ -446,11 +438,6 @@ textarea {
 
   .row {
     flex-direction: column;
-  }
-
-  .introduccion {
-    font-size: 2.4vw;
-    margin: 20px;
   }
 
   .felino {
